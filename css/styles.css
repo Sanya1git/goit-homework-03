@@ -3,16 +3,63 @@ body {
     color: #434455;
     background-color: #FFFFFF
 }
-
+ h1, h2, h3, h4, h5, h6, p{
+    margin-top: 0;
+    margin-bottom: 0;
+ }
+ ul, ol {
+    margin-top: 0;
+    margin-bottom: 0; 
+    padding-left: 0;
+  }
+  li {
+    list-style-type: none;
+  }
+  img{
+    display: block;
+  }
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  } 
+.container { 
+    width: 1158px; 
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;  
+    padding-right: 15px;
+}
+.section {
+ padding-top: 120px;
+ padding-bottom: 120px;
+}
 
  /*      header                        */
   .header {
 }
+.header-nav-address {
+ display: flex;
+ width: 1128px;
+ justify-content: space-between;
+ align-items: center;
+}
 .header-navigation {
+    display: flex;
+    align-items: center;
     
 }
 .header-logo {
-    color: var(--NAVY-BLUE, #4d5ae5);
+    margin-right: 76px;
+    color:  #4d5ae5;
     font-family: 'Raleway', sans-serif;
 font-size: 18px;
 font-weight: 700;
@@ -22,7 +69,8 @@ text-transform: uppercase;
 text-decoration: none;
 }
 .header-logo-span{
-    color: var(--IRIS, #2E2F42);
+
+    color:#2E2F42;
     font-family: 'Raleway', sans-serif;
 font-size: 18px;
 font-weight: 700;
@@ -32,14 +80,18 @@ text-transform: uppercase;
 text-decoration: none;
 }
 .header-menu {
-    
+    display: flex;
+    column-gap: 40px;
 }
 
 .header-menu-item{
-
+    
 }
 .header-menu-link {
-    color: var(--NAVY-BLUE, #2E2F42);
+    display: block;
+    padding-top:24px;
+    padding-bottom: 24px ;
+    color: #2E2F42;
 font-size: 16px;
 font-weight: 500;
 line-height: 1.5;
@@ -54,15 +106,16 @@ text-decoration: none;
 } 
 
 .header-address{
-    font-style: normal 
-
+    font-style: normal;
 }
 .header-cont {
+    display: flex;
+    column-gap: 40px;
 }
 .header-cont-item {
 }
 .header-cont-link {
-    color: var(--SLATE, #434455);
+    color: #434455;
 font-size: 16px;
 font-weight: 400;
 line-height: 1.5;
@@ -78,11 +131,15 @@ text-decoration: none;
 /* main */
 /* section 1 */
 .main-title {
-    background: var(--NAVY-BLUE, #2E2F42 );
+    background: #2E2F42 ;
 }
 .main-title-name {
-    
-    color: var(--WHITE, #FFFFFF);
+    width: 496px;
+    margin-top: 68px;
+    margin-bottom: 40px;
+    margin-left: auto ;
+    margin-right: auto ;
+    color: #FFFFFF;
     text-align: center;
     font-size: 56px;
     font-weight: 700;
@@ -90,8 +147,14 @@ text-decoration: none;
     letter-spacing: 0.02em;
 }
 .main-title-butt {
+    display: block;
+    padding: 16px 32px;
+    border-radius: 4px;
+    margin-bottom: 68px;
+    margin-left: auto ;
+    margin-right: auto ;
     font-family: "Roboto", sans-serif;
-    color: var(--WHITE, #FFFFFF);
+    color: #FFFFFF;
     background-color: #4D5AE5;
     font-size: 16px;
     font-weight: 500;
@@ -109,24 +172,30 @@ text-decoration: none;
 /* section 2 */
 .main-task {
 }
+
 .main-task-name{
     
+    
   } 
-.main-task-list {
+  .main-task-list {
+    display: flex;
+    gap: 24px;
+
 }
 .main-task-item {
 }
 .main-item-name {
-    color: var(--NAVY-BLUE, #2E2F42);
-text-align: center;
+    margin-bottom: 8px;
+    color:  #2E2F42;
+text-align: left;
 font-size: 20px;
 font-weight: 500;
 line-height: 1.2; 
 letter-spacing: 0.02em;
 }
 .main-item-text {
-    color: var(--SLATE, #434455);
-    text-align: center;
+    color: #434455;
+    text-align: left;
     font-size: 16px;
     line-height: 1.5; 
     letter-spacing: 0.02em; 
@@ -136,7 +205,8 @@ letter-spacing: 0.02em;
     background-color: #F4F4FD
 }
 .main-team-name {
-    color: var(--NAVY-BLUE, #2E2F42);
+    margin-bottom: 72px;
+    color: #2E2F42;
 text-align: center;
 font-size: 36px;
 font-weight: 700;
@@ -145,13 +215,17 @@ letter-spacing: 0.02em;
 text-transform: capitalize;
 }
 .main-team-list {
+    display: flex;
+    gap: 24px;
     
 }
 .main-team-item {
     background-color: #FFFFFF;
 }
 .team-name {
-    color: var(--NAVY-BLUE, #2E2F42);
+    margin-top: 32px;
+    margin-bottom: 8px;
+    color:  #2E2F42;
 text-align: center;
 font-size: 20px;
 font-weight: 500;
@@ -159,7 +233,8 @@ line-height: 1.2;
 letter-spacing: 0.02em;
 }
 .team-name-job {
-    color: var(--SLATE, #434455);
+    margin-bottom: 32px;
+    color: #434455;
 text-align: center;
 font-size: 16px;
 line-height: 1.5;
@@ -169,8 +244,9 @@ letter-spacing: 0.02em;
 .main-portfolio {
 }
 .main-portfolio-name {
-    color: var(--NAVY-BLUE, #2E2F42);
-text-align: center;;
+    margin-bottom: 36px;
+    color: #2E2F42;
+text-align: center;
 font-size: 36px;
 font-weight: 700;
 line-height: 1.11; 
@@ -178,27 +254,45 @@ letter-spacing: 0.02em;
 text-transform: capitalize;
 }
 .main-portfolio-list {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
 }
 .main-portfolio-item {
+    margin-top: 48px;
 }
 .portfolio-name {
-    color: var(--NAVY-BLUE, #2E2F42);
+    margin-top: 32px;
+    margin-bottom: 8px;
+    margin-left: 16px;
+    margin-right: 16px;
+    color: #2E2F42;
 font-size: 20px;
 font-weight: 500;
 line-height: 1.2;
 letter-spacing: 0.02em;
 }
 .portfolio-app {
-    color: var(--SLATE, #434455);
+    margin-bottom: 32px;
+    margin-left: 16px;
+    margin-right: 16px;
+    color: #434455;
 font-size: 16px;
 line-height: 1.5; 
 letter-spacing: 0.02em; 
 }
 /*  footer  */
-.footer { background-color: #2e2f42;
+.footer {
+    
+    background-color: #2e2f42;
 }
+.footer-list{
+    display: flex;
+    flex-direction: column;
+}
+
 .footer-logo-span {
-    color: var(--CLOUD, #F4F4FD);
+    color: #F4F4FD;
 font-family: 'Raleway', sans-serif;
 font-size: 18px;
 font-weight: 700;
@@ -208,7 +302,8 @@ text-transform: uppercase;
 
 }
 .footer-logo{
-    color: var(--IRIS, #4D5AE5);
+    margin-top: 105px;
+    color:  #4D5AE5;
 font-family: 'Raleway', sans-serif;
 font-size: 18px;
 font-weight: 700;
@@ -220,7 +315,10 @@ text-decoration: none;
 
 }
 .footer-info {
-    color: var(--CLOUD, #F4F4FD);
+    margin-top: 18px;
+    margin-bottom: 100px;
+    width: 264px;
+    color: #F4F4FD;
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em; 
